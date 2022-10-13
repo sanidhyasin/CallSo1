@@ -234,12 +234,32 @@ const videocall = () => {
         </div>
         <div
           className="basis-2/3"
-          style={{ display: "flex", justifyContent: "center" }}
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            background: "rgba(255, 255, 255, 0.3)",
+            position: "relative",
+          }}
+          id="video-call"
         >
-          <img
-            src="https://staticc.sportskeeda.com/editor/2021/05/3f88f-16224536148534-800.jpg"
-            alt=""
-          />
+          <div
+            className=""
+            style={{
+              margin: "10px",
+              position: "absolute",
+              top: "0",
+              right: "0",
+              // opacity: "0.9",
+              width: "220px",
+              height: "180px",
+              background: "red",
+            }}
+          >
+            {/* <img
+              src="https://www.thesun.co.uk/wp-content/uploads/2022/08/553fc8c0-4e02-4a96-800b-a2453827fe2b.jpg?w=670"
+              alt=""
+            /> */}
+          </div>
         </div>
         {/* <div className="flex basis-1/6">
           <div
