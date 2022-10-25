@@ -1,10 +1,8 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import styled from "styled-components";
-import { GoPlus } from "react-icons/go";
-import { HiMinus } from "react-icons/hi";
-import { FiPhoneCall } from "react-icons/fi";
 import { IoLogoWhatsapp } from "react-icons/io";
+import { AiOutlineCloseCircle } from "react-icons/ai";
 
 const Container = styled.div``;
 const Wrapper = styled.div`
@@ -28,14 +26,11 @@ const Heading = styled.h1`
   font-size: 64px;
 `;
 
-const Line = styled.p`
-  color: white;
-  font-size: 20px;
-  padding-bottom: 40px;
-`;
-
 const Callbox = styled.div`
-  background-color: #bfbfbf;
+  background-color: rgba(255, 255, 255, 0.1);
+  /* border: 10px solid white; */
+  /* opacity: 0.2; */
+  border: 1px solid white;
   width: 540px;
   height: 92px;
   display: flex;
@@ -45,37 +40,36 @@ const Callbox = styled.div`
   /* padding: 40px; */
 `;
 const Calling = styled.div`
+  opacity: 1;
   display: flex;
   flex-direction: row;
   margin-right: 30px;
+  justify-content: space-between;
   /* margin-top: 20px; */
 `;
+
 const Callleft = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+`;
+
+const Callleftin = styled.div`
   display: flex;
   justify-content: start;
   flex-direction: column;
   margin-right: 20px;
 `;
 
+const Callright = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
 const Message = styled.div`
   display: flex;
   justify-content: start;
-`;
-
-const Button = styled.button`
-  display: flex;
-  padding: 8px 45px;
-  margin: 20px;
-  margin-left: 80px;
-  margin-right: 80px;
-  font-size: 16px;
-  border-radius: 20px;
-  background-color: white;
-  cursor: pointer;
-  color: black;
-  border: 2px solid white;
-  font-family: "Oxanium", cursive;
-  justify-content: center;
+  color: white;
 `;
 
 const calling = () => {
@@ -89,12 +83,24 @@ const calling = () => {
           <Callbox>
             <Calling>
               <Callleft>
-                <IoLogoWhatsapp size={40} style={{ marginLeft: "20px" }} />
+                <Callleftin>
+                  <IoLogoWhatsapp
+                    size={40}
+                    style={{ marginLeft: "20px", color: "white" }}
+                  />
+                </Callleftin>
+                <Callleftin>
+                  <Message>You are calling</Message>
+                  <Message>" 56gd2367d678gf2378 "</Message>
+                </Callleftin>
               </Callleft>
-              <Callleft>
-                <Message>You are calling</Message>
-                <Message>" 56gd2367d678gf2378 "</Message>
-              </Callleft>
+              <Callright>
+                <AiOutlineCloseCircle
+                  className="hover:scale-125 transition-all"
+                  size={40}
+                  style={{ color: "white", cursor: "pointer" }}
+                />
+              </Callright>
             </Calling>
           </Callbox>
         </Wrapper>

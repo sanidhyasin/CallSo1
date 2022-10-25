@@ -4,14 +4,16 @@ import {
   BsCalendar2RangeFill,
   BsFillCameraVideoFill,
   BsFillMicFill,
+  BsImage,
+  BsImageFill,
 } from "react-icons/bs";
-import { AiFillHome } from "react-icons/ai";
+import { AiFillHome, AiOutlineSend } from "react-icons/ai";
 import {
   MdOutlinePresentToAll,
   MdAnalytics,
   MdArrowBackIos,
 } from "react-icons/md";
-import { IoSettings } from "react-icons/io5";
+import { IoSettings, IoSendSharp } from "react-icons/io5";
 import { IoMdAdd } from "react-icons/io";
 import { BsFillRecordCircleFill } from "react-icons/bs";
 import { ImPhoneHangUp } from "react-icons/im";
@@ -19,11 +21,12 @@ import { HiUserGroup } from "react-icons/hi";
 import { GiSoundWaves } from "react-icons/gi";
 import "../pages/call.css";
 import Chatbox from "../components/Chatbox";
+import ChatCard from "../components/videocall/ChatCard";
 
 const videocall = () => {
   return (
     <div className="new flex flex-row item-stretch">
-      <div className="flex flex-col justify-evenly functions basis-1/6 bg-transparent   ">
+      <div className="flex flex-col justify-evenly basis-1/12 bg-transparent ml-2">
         <div
           className="inline-flex shadow-md hover:shadow-lg focus:shadow-lg"
           role="group"
@@ -91,23 +94,6 @@ const videocall = () => {
           </button>
         </div>
 
-        {/* <button style={{ color: "white" }}>
-              <FaBell size={20} />
-            </button> */}
-
-        {/* <button type="radio" className style={{ color: "white" }}>
-              <MdAnalytics size={23} />
-            </button>
-            <button className style={{ color: "white" }}>
-              <BsCalendar2RangeFill size={17} />
-            </button>
-            <button className style={{ color: "white" }}>
-              <BsFillCameraVideoFill size={20} />
-            </button>
-            <button className style={{ color: "white" }}>
-              <AiFillHome size={20} />
-            </button> */}
-
         <div
           className="inline-flex shadow-md hover:shadow-lg focus:shadow-lg"
           role="group"
@@ -153,7 +139,7 @@ const videocall = () => {
           </button>
         </div>
       </div>
-      <div className="functions basis-2/3 bg-transparent flex flex-col">
+      <div className="basis-9/12 bg-transparent flex flex-col">
         <div
           className="flex flex-col basis-1/6 justify-center"
           style={{ color: "white" }}
@@ -231,6 +217,7 @@ const videocall = () => {
               </p>
             </div>
           </div>
+          <hr />
         </div>
         <div
           className="basis-2/3"
@@ -330,24 +317,125 @@ const videocall = () => {
         </div>
       </div>
       <div
-        className="functions flex basis-2/6"
+        className="flex flex-col basis-4/12 text-white  items-center justify-center mx-5 my-6 rounded-3xl"
         style={{
-          color: "white",
-          justifyContent: "center",
-          padding: "0",
+          // backgroundColor: "rgba(0, 0, 0, 0.4)",
+          // backgroundColor: "rgba(55,23,29,0.9)",
+          backgroundColor: "rgba(0, 0, 0, 0.45)",
         }}
       >
-        <div
-          className=""
-          style={{
-            // backgroundImage: "URL(https://i.imgur.com/1cr0J7k.png)",
-            width: "100%",
-            height: "100%",
-            // backgroundSize: "cover",
-            padding: "0",
-          }}
-        >
-          <Chatbox />
+        <div className="flex basis-1/12 flex-row items-center justify-center w-full h-full py-4 px-4">
+          <div className="flex basis-1/2 flex-row items-center justify-center border-2 transition-all rounded-md mx-4 py-2 text-lg">
+            <h1>Messages (4)</h1>
+          </div>
+
+          <div className="flex basis-1/2 flex-row items-center justify-center hover:border-2 transition-all rounded-md mx-4 py-2 text-lg">
+            <h1>Particpants</h1>
+          </div>
+        </div>
+        {/* <div class="relative flex py-1 items-center">
+          <div class="flex-grow border-t border-gray-400"></div>
+          <span class="flex-shrink mx-4 text-gray-400">Content</span>
+          <div class="flex-grow border-t border-gray-400"></div>
+        </div> */}
+        <div className="flex basis-3/12 w-10/12 flex-row items-center justify-center border-t-2 border-b-2 py-3 h-full">
+          <div
+            className="flex flex-col items-start justify-start border-2 w-full h-full rounded-xl py-2 px-3"
+            style={{
+              backgroundColor: "rgba(80, 99, 117, 0.31)",
+            }}
+          >
+            <div className="flex border-b-2 w-full py-1">
+              <div className="flex">Use of graphics</div>
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col basis-6/12 w-full items-start justify-start h-full overflow-auto py-4">
+          {/* <div className="flex flex-row basis-1/6 items-start justify-start w-full px-2">
+            <div className="flex px-2">
+              <div>
+                <img src="https://i.imgur.com/rFxCTa3.png" alt="" />
+              </div>
+            </div>
+            <div className="flex flex-col w-4/5">
+              <div className="flex text-sm font-extralight">Caesy</div>
+              <div
+                className="flex border-2 rounded-r-md rounded-bl-md"
+                // style={{
+                //   backgroundColor: "rgba(0, 0, 0, 0.3)",
+                // }}
+              >
+                <div className="px-3 py-2 text-sm">
+                  Hello Guys! Lorem ipsum dolor sit amet, consectetur
+                </div>
+                <div className="px-3 py-2 text-xs font-extralight">
+                  12:02 pm
+                </div>
+              </div>
+            </div>
+          </div> */}
+          <ChatCard />
+          <div className="flex flex-row basis-1/6 items-start justify-start w-fit px-2 my-2">
+            <div className="flex px-2">
+              <div>
+                <img src="https://i.imgur.com/rFxCTa3.png" alt="" />
+              </div>
+            </div>
+            <div className="flex flex-col w-4/5">
+              <div className="flex text-xs font-extralight text-gray-300">
+                Caesy
+              </div>
+              <div
+                className="flex border-2 rounded-r-md rounded-bl-md flex-row justify-between"
+                // style={{
+                //   backgroundColor: "rgba(0, 0, 0, 0.3)",
+                // }}
+              >
+                <div className="px-3 py-2 text-xs flex">Hello Guys!</div>
+                <div className="px-3 py-2 text-xs font-extralight flex">
+                  12:02 pm
+                </div>
+              </div>
+            </div>
+          </div>
+          <ChatCard />
+          <ChatCard />
+          <ChatCard />
+          <ChatCard />
+          <ChatCard />
+        </div>
+        <div className="flex basis-2/12 w-full h-full flex-col items-center justify-center px-6 py-7">
+          <div
+            className="flex flex-row w-full items-center justify-center h-full border-2 rounded-3xl"
+            style={{
+              backgroundColor: "rgba(255, 255, 250, 0.1)",
+            }}
+          >
+            <div className="flex flex-col items-center justify-center basis-1/6 ">
+              <div className="flex text-gray-300">
+                <BsImageFill size={25} />
+              </div>
+            </div>
+            <div className="flex basis-4/6 border-l-2 px-4">
+              <input
+                className="outline-none bg-transparent"
+                type="text"
+                placeholder="Write message here"
+              />
+            </div>
+            <div className="flex basis-1/6 flex-col items-center justify-center">
+              <div
+                className="flex flex-col items-center justify-center border-2 rounded-3xl"
+                style={{
+                  backgroundColor: "rgba(117, 117, 117, 0.64)",
+                }}
+              >
+                <div className=" flex px-2 py-1 text-white">
+                  <AiOutlineSend size={15} />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

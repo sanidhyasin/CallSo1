@@ -145,16 +145,19 @@ const call = () => {
           </button>
         </div>
       </div>
-      <div className="functions basis-2/3 bg-transparent flex flex-col">
-        <div className="basis-5/6">1</div>
-        <div className="flex basis-1/6">
-          {/* <div
-                className="flex flex-row"
-                style={{ alignItems: "flex-end" }}
-              ></div> */}
+      <div className="functions basis-2/3 bg-transparent flex flex-col justify-center">
+        {/* <div className="flex flex-row basis-5/6 justify-center"></div> */}
+        <div className="flex flex-row basis-5/6 justify-center">
+          <div
+            className="flex flex-col justify-center"
+            style={{ display: "flex", width: "400px", height: "400px" }}
+          >
+            <img src="https://i.imgur.com/3yVHSkR.gif" />
+          </div>
         </div>
+        
 
-        <div className="flex flex-col flex-1 basis-2/6 mt-60 ml-80 mr-72">
+        <div className="flex flex-col flex-1 basis-2/6 mt-60 ml-80 mr-72 justify-end mb-8">
           <div className="flex mb-2">
             <div
               style={{
@@ -189,7 +192,7 @@ const call = () => {
                 justifyContent: "center",
               }}
             >
-              <MdOutlinePresentToAll size={20} className="hover:bg-slate-700"/>
+              <MdOutlinePresentToAll size={20} className="hover:bg-slate-700" />
               {/* <input type={range}/> */}
             </button>
             <button className="flex-1" style={{ color: "white" }}>
@@ -215,16 +218,16 @@ const call = () => {
                     marginTop: "2px",
                     display: "flex",
                     backgroundColor: "red",
-                    hover:"black",
-                  }} 
+                    hover: "black",
+                  }}
                 />
               </button>
             </div>
             <button className="flex-1" style={{ color: "white" }}>
-              <BsFillMicFill size={20} className="hover:bg-slate-700"/>
+              <BsFillMicFill size={20} className="hover:bg-slate-700" />
             </button>
             <button className="flex-1" style={{ color: "white" }}>
-              <IoSettings size={20} className="hover:bg-slate-700"/>
+              <IoSettings size={20} className="hover:bg-slate-700" />
             </button>
           </div>
         </div>

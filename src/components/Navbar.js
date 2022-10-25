@@ -3,10 +3,11 @@ import styled from "styled-components";
 
 const Container = styled.div`
   height: 100px;
+  margin-bottom: 40px;
 `;
 
 const Wrapper = styled.div`
-  padding: 10px 40px;
+  padding: 0px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -18,9 +19,9 @@ const Left = styled.div`
   align-items: center;
 `;
 
-const Logo = styled.h1`
-  font-weight: bold;
-  color: white;
+const Logo = styled.img`
+  width: 164px;
+  height: 150px;
 `;
 
 const Center = styled.div`
@@ -42,13 +43,14 @@ const MenuItem = styled.div`
 `;
 
 const Button = styled.button`
+  border-radius: 50px;
   padding: 10px;
   font-size: 20px;
   background-color: transparent;
   cursor: pointer;
   color: white;
   border: 2px solid white;
-  font-family: 'Oxanium', cursive;
+  font-family: "Oxanium", cursive;
 `;
 
 const Navbar = () => {
@@ -56,12 +58,14 @@ const Navbar = () => {
     <Container>
       <Wrapper>
         <Left>
-          <Logo>CallSo</Logo>
+          <Logo src="https://i.imgur.com/x3FIPdr.png" />
         </Left>
         <Center>{/* <Logo>DRIP.</Logo> */}</Center>
         <Right>
           <MenuItem>
-            <Button>Connect Wallet</Button>
+            <Button className="hover:scale-110 transition-all">
+              Connect Wallet
+            </Button>
           </MenuItem>
         </Right>
       </Wrapper>

@@ -3,7 +3,9 @@
 @tailwind utilities;
 body {
   margin: 0;
-  background-image: url("https://i.imgur.com/5ZfpRbV.png");
+  /* background-image: url("https://i.imgur.com/5ZfpRbV.png"); */
+  /* background-image: url("https://i.imgur.com/N0qvxpI.jpg"); */
+  background-image: url("https://i.imgur.com/4sUwxJP.png");
   /* background-repeat: no-repeat; */
   background-size: cover;
   font-family: "Oxanium", cursive;

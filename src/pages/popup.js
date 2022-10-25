@@ -1,10 +1,8 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import styled from "styled-components";
-import { GoPlus } from "react-icons/go";
-import { HiMinus } from "react-icons/hi";
-import { FiPhoneCall } from "react-icons/fi";
 import { IoLogoWhatsapp } from "react-icons/io";
+import { AiOutlineCloseCircle } from "react-icons/ai";
 
 const Container = styled.div``;
 const Wrapper = styled.div`
@@ -34,41 +32,74 @@ const Line = styled.p`
 `;
 
 const Callbox = styled.div`
-  background-color: #bfbfbf;
+  background-color: rgba(255, 255, 255, 0.1);
+  /* border: 10px solid white; */
+  /* opacity: 0.2; */
+  border: 1px solid white;
   width: 540px;
   height: 208px;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-direction: column;
   border-radius: 10px;
+  /* padding: 40px; */
 `;
-const Calling = styled.div`
+
+const Callup = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 20px;
 `;
-const Callicon = styled.div`
+
+const Calling = styled.div`
+  opacity: 1;
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  margin-right: 30px;
+  justify-content: space-between;
+  /* margin-top: 20px; */
+`;
+
+const Callleft = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+`;
+
+const Callleftin = styled.div`
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  margin-right: 20px;
+`;
+
+const Callright = styled.div`
+  display: flex;
+  flex-direction: column;
 `;
 
 const Message = styled.div`
+  display: flex;
+  justify-content: start;
+  color: white;
+`;
+
+const Calldown = styled.div`
   display: flex;
   justify-content: center;
 `;
 
 const Button = styled.button`
   display: flex;
-  padding: 8px 45px;
-  margin: 20px;
+  padding: 10px 150px;
+  /* margin: 20px;
   margin-left: 80px;
-  margin-right: 80px;
+  margin-right: 80px; */
   font-size: 16px;
   border-radius: 20px;
-  background-color: white;
+  /* background-color: white; */
   cursor: pointer;
-  color: black;
-  border: 2px solid white;
+  color: white;
+  /* border: 2px solid white; */
   font-family: "Oxanium", cursive;
   justify-content: center;
 `;
@@ -82,20 +113,51 @@ const popup = () => {
           <Heading>Future of Communication</Heading>
           <Line>Connect your wallet to make a call.</Line>
           <Callbox>
-            <Calling>
-              <Message>
-                56gd2367d678gf2378
-              </Message>
-              <Message>is calling</Message>
-            </Calling>
-            <Button>
-              <GoPlus />
-              Accept Call
-            </Button>
-            <Button>
-              <HiMinus />
-              Decline Call
-            </Button>
+            <Callup>
+              <Calling>
+                <Callleft>
+                  <Callleftin>
+                    <IoLogoWhatsapp
+                      size={40}
+                      style={{ marginLeft: "20px", color: "white" }}
+                    />
+                  </Callleftin>
+                  <Callleftin>
+                    <Message>56gd2367d678gf2378</Message>
+                    <Message>is calling you</Message>
+                  </Callleftin>
+                </Callleft>
+                <Callright>
+                  <AiOutlineCloseCircle
+                    className="hover:scale-110 transition-all"
+                    size={40}
+                    style={{ color: "white", cursor: "pointer" }}
+                  />
+                </Callright>
+              </Calling>
+            </Callup>
+            <Calldown>
+              <div className="flex flex-col">
+                <Button
+                  className="flex m-2 hover:scale-110 transition-all"
+                  style={{
+                    backgroundImage:
+                      "linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(107, 0, 165, 0.82))",
+                  }}
+                >
+                  Accept Call
+                </Button>
+                <Button
+                  className="flex m-2 hover:scale-110 transition-all"
+                  style={{
+                    backgroundImage:
+                      "linear-gradient(to right,rgba(252, 2, 187, 0.65),rgba(0, 0, 0, 0.8))",
+                  }}
+                >
+                  Decline Call
+                </Button>
+              </div>
+            </Calldown>
           </Callbox>
         </Wrapper>
       </Container>

@@ -1,8 +1,13 @@
 import React from "react";
 import styled from "styled-components";
+import Navbar from "./Navbar";
 
-const Container = styled.div``;
+const Container = styled.div`
+  /* background-image: url("https://i.imgur.com/4sUwxJP.png");
+  background-size: cover; */
+`;
 const Wrapper = styled.div`
+  margin-top: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,10 +36,10 @@ const Line = styled.p`
 const Inputbox = styled.div`
   height: 60px;
   width: 463px;
-  background-color: #354657;
+  background-color: rgba(255, 255, 255, 0.1);
   display: flex;
   margin-bottom: 20px;
-  border-radius: 10px;
+  border-radius: 30px;
 `;
 
 const SearchContainer = styled.span`
@@ -46,26 +51,28 @@ const SearchContainer = styled.span`
 `;
 
 const Input = styled.input`
+  opacity: 1 !important;
   margin-left: 20px;
-  background-color: #354657;
+  background-color: transparent;
   border: none;
   color: white;
   font-size: 16px;
   font-family: "Oxanium", cursive;
   &:focus {
     outline: none;
+    /* color: white; */
   }
   &::placeholder {
     border: none;
-    /* padding: 15px; */
     color: white;
+    opacity: 1 !important;
   }
 `;
 
 const Button = styled.button`
   padding: 8px 45px;
   font-size: 16px;
-  border-radius: 20px;
+  border-radius: 50px;
   background-color: transparent;
   cursor: pointer;
   color: white;
@@ -85,6 +92,7 @@ const Button = styled.button`
 const Homepage = () => {
   return (
     <Container>
+      <Navbar />
       <Wrapper>
         <Heading>Future of Communication</Heading>
         <Line>Connect your wallet to make a call.</Line>
@@ -93,7 +101,7 @@ const Homepage = () => {
             <Input placeholder="Enter wallet address...." />
           </SearchContainer>
         </Inputbox>
-        <Button>Call</Button>
+        <Button className="hover:scale-110 transition-all">Call</Button>
       </Wrapper>
     </Container>
   );
