@@ -5,16 +5,22 @@ import Navbar from "./components/Navbar";
 import Popup from "./pages/popup";
 import Calling from "./pages/calling";
 import Call from "./pages/call";
+import Message from "./pages/message";
+import MessageChat from "./pages/messagechat";
 import ProfilePage from "./pages/profilePage";
 import ProfileHome from "./components/ProfileHome";
 import Videocall from "./pages/videocall";
+import ProfileContact from "./components/contact/ProfileContact";
 // import "../src/App.css";
 
 function App() {
   return (
     <div className="body">
-      {/* <ProfilePage /> */}
-      <Videocall />
+      {/* <ProfileContact /> */}
+      {/* <Message /> */}
+      {/* <Notification /> */}
+      {/* <Videocall /> */}
+      <MessageChat />
     </div>
   );
 }
